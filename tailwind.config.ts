@@ -11,6 +11,8 @@ const config: Config = {
 			fontFamily: {
 				outfit: ["Outfit", "sans-serif"],
 			},
+			backgroundColor: { primary: "#DAE9FD" ,secondary:'#1DA1F2'},
+			colors: { blue: "#1DA1F2" },
 		},
 	},
 	plugins: [],
