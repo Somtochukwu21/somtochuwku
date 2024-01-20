@@ -37,6 +37,7 @@ export const NavigationMenu = () => {
 
 	const list = (anchor: string) => (
 		<Box
+			className="pt-6"
 			role="presentation"
 			onClick={toggleDrawer(anchor, false)}
 			onKeyDown={toggleDrawer(anchor, false)}>
