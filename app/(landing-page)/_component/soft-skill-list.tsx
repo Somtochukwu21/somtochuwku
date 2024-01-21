@@ -15,8 +15,8 @@ const SkillItem: React.FC<SkillItemProps> = ({
 		<li className="mb-4">
 			<div>
 				<div className="flex justify-between items-center">
-					<h3 className="text-sm font-semibold uppercase">{skill}</h3>
-					<p className="text-sm">{percentage}</p>
+					<h3 className="text-xs md:text-sm md:font-semibold uppercase">{skill}</h3>
+					<p className="text-xs md:text-sm">{percentage}</p>
 				</div>
 				<div className="bg-gray-300 w-full h-2 rounded">
 					<div className={`h-2 bg-secondary rounded ${className}`}></div>

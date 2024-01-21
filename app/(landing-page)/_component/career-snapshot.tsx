@@ -12,8 +12,8 @@ interface CareerCardProp {
 const CareerCard = ({ icon, text, numbers }: CareerCardProp) => (
 	<Card className="bg-light">
 		<CardContent className="text-center">
-			<div className="text-blue text-xl">{icon}</div>
-			<p className="text-blue text-2xl ">{numbers}</p>
+			<div className="text-blue text-xl self-center">{icon}</div>
+			<p className="text-blue text-xl md:text-2xl ">{numbers}</p>
 			<p className="uppercase text-xs">{text}</p>
 		</CardContent>
 	</Card>
