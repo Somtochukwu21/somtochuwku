@@ -21,14 +21,14 @@ const CareerCard = ({ icon, text, numbers }: CareerCardProp) => (
 
 export const CareerSnapshot = () => {
 	return (
-		<div className="flex space-x-2 mt-4">
+		<div className="flex space-x-2 mt-4 [&>*]:w-1/3">
 			<CareerCard icon={<FaUserClock />} text="years experience" numbers="2+" />
 			<CareerCard
 				icon={<GiAchievement />}
 				text="projects completed"
 				numbers="10+"
 			/>
-			<CareerCard icon={<BiSolidLike />} text="recommendation" numbers="4+" />
+			<CareerCard icon={<BiSolidLike />} text="courses" numbers="10+" />
 		</div>
 	);
 };
