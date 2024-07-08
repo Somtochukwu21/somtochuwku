@@ -1,6 +1,5 @@
-import React from "react";
-import { Navbar } from "@/components/ui";
-import { Description, AboutMe, Footer, Services } from "./_component";
+import { Navbar } from "../../components/ui";
+import { AboutMe, Description, Footer, Projects, Services } from "./_component";
 
 const Home = () => {
 	return (
@@ -9,6 +8,7 @@ const Home = () => {
 			<Description />
 			<AboutMe />
 			<Services />
+			<Projects />
 			<Footer />
 		</div>
 	);

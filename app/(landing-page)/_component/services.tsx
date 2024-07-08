@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui";
-import { Card as JoyCard, CardContent } from "@mui/joy";
+import { CardContent, Card as JoyCard } from "@mui/joy";
 import React, { ReactNode } from "react";
-import { FaLaptopCode, FaCode } from "react-icons/fa6";
+import { FaCode, FaLaptopCode } from "react-icons/fa6";
 import { MdDesignServices } from "react-icons/md";
 
 interface ServiceCardProp {
@@ -50,9 +50,12 @@ export const Services = () => {
 				<ServiceCard
 					icon={<FaCode className="text-4xl text-blue" />}
 					title="Graphics Design"
-					className="my-3">
+					className="my-3 lg:my-0">
 					Designing eye catching visuals for branding, marketing, and digital
-					needs,emphasizing aesthetics and design principles
+					needs,emphasizing aesthetics and design principles Lorem ipsum dolor
+					sit amet consectetur adipisicing elit. Cupiditate perferendis nesciunt
+					culpa quod. Provident, natus molestiae tempore suscipit nesciunt
+					perspiciatis?
 				</ServiceCard>
 
 				<ServiceCard
