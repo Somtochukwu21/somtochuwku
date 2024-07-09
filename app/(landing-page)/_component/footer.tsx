@@ -3,9 +3,8 @@ import { Card } from "../../../components/ui";
 export const Footer = () => {
 
 	return (
-		<footer className="bg-[#1a2238] text-white py-12 px-4 lg:px-32">
-			<Card>
-				<div className="  grid grid-cols-1 lg:grid-cols-2 gap-8">
+		<footer className="bg-[#1a2238] text-white py-12 px-s4 lg:px-32">
+				<div className="m-auto max-w-[1200px]  grid grid-cols-1 lg:grid-cols-2 gap-8">
 					{/* Left Section */}
 					<div>
 						<h2 className="text-3xl font-bold mb-4">GET IN TOUCH</h2>
@@ -88,7 +87,6 @@ export const Footer = () => {
 						</form>
 					</div>
 				</div>
-			</Card>
 		</footer>
 	);
 
@@ -99,3 +97,6 @@ export const Footer = () => {
 	// 	<p>&copy; 2024 Somtochukwu. All rights reserved.</p>
 	// </footer>
 };
+
+
+// work on the responsiveness
