@@ -17,10 +17,8 @@
 	.card:hover .card__content {
 		transform: rotateX(0deg);
 	}
-	.card__title {
-		@apply text-2xl text-gray-50 font-bold m-0;
-	}
-	.card:hover svg {
+
+	.card:hover Image {
 		scale: 0;
 	}
 	.card__description {
