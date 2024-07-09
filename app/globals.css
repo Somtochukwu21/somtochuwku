@@ -7,11 +7,8 @@
 	.card {
 		perspective: 1000px;
 	}
-	.card Image {
-		@apply transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)];
-	}
+
 	.card__content {
-		@apply absolute w-full h-full box-border bg-secondary origin-bottom transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)] p-5 left-0 top-0;
 		transform: rotateX(-90deg);
 	}
 	.card:hover .card__content {
@@ -20,8 +17,5 @@
 
 	.card:hover Image {
 		scale: 0;
-	}
-	.card__description {
-		@apply text-sm text-gray-300 leading-[1.4] mt-2.5 mb-0 mx-0;
 	}
 }

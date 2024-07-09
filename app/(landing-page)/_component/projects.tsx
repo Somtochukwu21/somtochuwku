@@ -47,32 +47,34 @@ export const Projects = () => (
 
 		<div className="mt-4 mb-8">
 			<div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-				<ProjectCards src={zigahLogin} title="Zigah Dashboard" />
-				<ProjectCards src={meal} title="Meal" />
-				<ProjectCards src={piabalClubs} title="Piabal Admin Dashboard" />
-				<ProjectCards src={gobet} title="Go Bet" />
-				<ProjectCards src={shortly} title="Shortly" />
-				<ProjectCards src={loom} title="Loom Clone" />
+				<ProjectCard src={zigahLogin} title="Zigah Dashboard" />
+				<ProjectCard src={meal} title="Meal" />
+				<ProjectCard src={piabalClubs} title="Piabal Admin Dashboard" />
+				<ProjectCard src={gobet} title="Go Bet" />
+				<ProjectCard src={shortly} title="Shortly" />
+				<ProjectCard src={loom} title="Loom Clone" />
 			</div>
 		</div>
 	</Card>
 );
 
-interface ProjectCardsProps {
+interface ProjectCardProps {
 	src: StaticImageData;
 	title: string;
 }
 
-const ProjectCards: React.FC<ProjectCardsProps> = ({ src, title }) => (
+const ProjectCard: React.FC<ProjectCardProps> = ({ src, title }) => (
 	<div className="card relative w-full h-[200px] bg-[#f2f2f2] flex items-center justify-center overflow-hidden shadow-lg transition-transform duration-500 ease-in-out rounded-lg hover:shadow-2xl hover:scale-105">
 		<div className="w-full h-full">
-			<Image alt="projects" src={src} className="w-full h-full object-cover" />
+			<Image
+				alt="projects"
+				src={src}
+				className="w-full h-full object-cover transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+			/>
 		</div>
-		<div className=" card__content absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-			<p className=" text-2xl text-gray-50 font-bold m-0 capitalize">
-				{title}
-			</p>
-			<p className="card__description">
+		<div className="card__content absolute bottom-0 left-0 right-0 bg-secondary bg-opacity-50 text-white p-4 w-full h-full box-border origin-bottom transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)]">
+			<p className="text-2xl text-gray-50 font-bold m-0 capitalize">{title}</p>
+			<p className="text-sm text-gray-300 leading-[1.4] mt-2.5 mb-0 mx-0">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua.
 			</p>
