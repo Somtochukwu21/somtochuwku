@@ -1,6 +1,6 @@
 export * from "./about-me";
 export * from "./career-snapshot";
-export * from "./footer";
+export * from "./footer/footer";
 export * from "./projects";
 export * from "./services";
 export * from "./site-description";

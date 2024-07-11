@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui";
 import Image from "next/image";
 import React from "react";
+import { Button } from "./_global";
 interface TextOnImageProps {
 	text: string;
 	className?: string;
@@ -31,9 +32,7 @@ export const Description = () => {
 					</p>
 
 					<div className="mt-6">
-						<button className="max-w-320  p-2.5 px-5 text-xs leading-5 font-bold uppercase align-middle rounded-md border border-solid border-opacity-25 gap-3 text-white bg-secondary cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105">
-							Download Resume
-						</button>
+						<Button text="	Download Resume" classN="bg-secondary" />
 					</div>
 				</div>
 				<div className="flex justify-center lg:justify-end">

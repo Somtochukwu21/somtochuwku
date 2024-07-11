@@ -28,7 +28,7 @@ const ServiceCard: React.FC<ServiceCardProp> = ({
 );
 export const Services = () => {
 	return (
-		<Card className="my-4 ">
+		<Card className="my-4">
 			<div>
 				<h4 className="font-bold text-xl lg:text-4xl uppercase text-center">
 					my services

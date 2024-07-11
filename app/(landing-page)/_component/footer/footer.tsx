@@ -1,15 +1,19 @@
-import { Card } from "../../../components/ui";
+"use client";
 
-export const Footer = () => {
-
+import React from "react";
+import { Card } from "../../../../components/ui";
+import { Button } from "../_global";
+import { Form } from "./form";
+export const Footer: React.FC = () => {
 	return (
-		<footer className="bg-[#1a2238] text-white py-12 px-s4 lg:px-32">
-				<div className="m-auto max-w-[1200px]  grid grid-cols-1 lg:grid-cols-2 gap-8">
+		<footer>
+			<Card className="bg-secondary text-white py-12">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 					{/* Left Section */}
 					<div>
 						<h2 className="text-3xl font-bold mb-4">GET IN TOUCH</h2>
 						<h1 className="text-4xl lg:text-5xl font-bold mb-4">
-							Let&apos ;s Connect & Collaborate
+							Let&apos;s Connect & Collaborate
 						</h1>
 						<p className="mb-8">
 							Feel free to get in touch with me. I am always open to discussing
@@ -57,46 +61,10 @@ export const Footer = () => {
 					</div>
 
 					{/* Right Section */}
-					<div className="bg-[#0f172a] p-8 rounded-lg">
-						<form className="space-y-4">
-							<div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-								<input
-									type="text"
-									placeholder="Name"
-									className="p-4 bg-[#1e293b] rounded-lg focus:outline-none"
-								/>
-								<input
-									type="email"
-									placeholder="Email"
-									className="p-4 bg-[#1e293b] rounded-lg focus:outline-none"
-								/>
-							</div>
-							<input
-								type="text"
-								placeholder="Subject"
-								className="w-full p-4 bg-[#1e293b] rounded-lg focus:outline-none"
-							/>
-							<textarea
-								placeholder="Message"
-								className="w-full p-4 bg-[#1e293b] rounded-lg focus:outline-none h-40"></textarea>
-							<button
-								type="submit"
-								className="w-full py-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700">
-								Send Message
-							</button>
-						</form>
-					</div>
+					<div className="bg-[#1a2238] p-8 rounded-lg">
+				<Form />					</div>
 				</div>
+			</Card>
 		</footer>
 	);
-
- 
-
-
-	// <footer className="bg-secondary text-white p-4 text-center ">
-	// 	<p>&copy; 2024 Somtochukwu. All rights reserved.</p>
-	// </footer>
 };
-
-
-// work on the responsiveness
