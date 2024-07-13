@@ -64,17 +64,21 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ src, title }) => (
-	<div className="card relative w-full h-[200px] bg-[#f2f2f2] flex items-center justify-center overflow-hidden shadow-lg transition-transform duration-500 ease-in-out rounded-lg hover:shadow-2xl hover:scale-105">
+	<div
+		 className="card relative w-full h-[200px] bg-[#f2f2f2] flex items-center justify-center overflow-hidden shadow-lg transition-transform duration-500 ease-in-out rounded-lg hover:shadow-2xl hover:scale-105"
+	>
 		<div className="w-full h-full">
 			<Image
 				alt="projects"
 				src={src}
-				className="w-full h-full object-cover transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+				 className="w-full h-full object-cover transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
 			/>
 		</div>
-		<div className="card__content absolute bottom-0 left-0 right-0 bg-secondary bg-opacity-50 text-white p-4 w-full h-full box-border origin-bottom transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)]">
-			<p className="text-2xl text-gray-50 font-bold m-0 capitalize">{title}</p>
-			<p className="text-sm text-gray-300 leading-[1.4] mt-2.5 mb-0 mx-0">
+		<div
+			 className="card__content absolute bottom-0 left-0 right-0 bg-secondary bg-opacity-50 text-white p-4 w-full h-full box-border origin-bottom transition-all duration-[0.6s] ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+		>
+			<p className="text-2xl text-gray-50 font-bold ms-0 capitalize">{title}</p>
+			<p className="text-sm text-gray-300 leading-[1.4] mt-2.s5 mb-0 mx-0">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua.
 			</p>

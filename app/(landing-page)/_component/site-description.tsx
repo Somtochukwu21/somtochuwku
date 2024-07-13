@@ -17,7 +17,7 @@ const TextOnImage: React.FC<TextOnImageProps> = ({ text, className }) => (
 export const Description = () => {
 	return (
 		<Card className="lg:overflow-clip bg-primary">
-			<div className="lg:flex lg:[&>*]:w-1/2 items-center lg:pb-0">
+			<div className="lg:flex lg:[&>*]:w-1/2 items-center lg:pb-0  text-center lg:text-left">
 				<div className="mb-12 lg:mb-0">
 					<h3 className="font-medium text-sm uppercase">hello i am</h3>
 					<h1 className="mt-3 font-bold text-xl lg:text-4xl uppercase">
@@ -32,7 +32,9 @@ export const Description = () => {
 					</p>
 
 					<div className="mt-6">
-						<Button text="	Download Resume" classN="bg-secondary" />
+						<Button classN="hover:scale-105 bg-secondary text-white">
+							Download Resume
+						</Button>
 					</div>
 				</div>
 				<div className="flex justify-center lg:justify-end">

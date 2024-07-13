@@ -1,7 +1,9 @@
 import emailjs from "emailjs-com";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import {} from "react-icons";
+import { FaSpinner } from "react-icons/fa";
 import { Button } from "../_global";
-
 interface FormValues {
 	username: string;
 	email: string;
@@ -11,23 +13,29 @@ interface FormValues {
 
 export const Form = () => {
 	const form = useForm<FormValues>();
-	const { formState, register, handleSubmit } = form;
-	const { errors, isLoading } = formState;
+	const { formState, register, reset, handleSubmit } = form;
+	const { errors } = formState;
+	const [isLoading, setIsLoading] = useState(false);
+	const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
-	const sendMail = (data: FormValues) => {
-		emailjs
-			.send("service_wy3jmfd", "template_29n6npl", data, "EIjoH4eYO1yQseyCR")
-			.then(
-				(response) => {
-					console.log("SUCCESS!", response.status, response.text);
-					alert("Message sent successfully!");
-				},
-				(err) => {
-					console.log("FAILED...", err);
-					alert("Failed to send message. Please try again.");
-				}
+	const sendMail = async (data: FormValues) => {
+		setIsLoading(true);
+		setStatusMessage(null);
+		try {
+			const response = await emailjs.send(
+				"service_wy3jmfd",
+				"template_29n6npl",
+				data,
+				"EIjoH4eYO1yQseyCR"
 			);
-		console.log(data);
+
+			setStatusMessage("Message sent successfully!");
+			reset();
+		} catch (err) {
+			setStatusMessage("Failed to send message. Please try again.");
+		} finally {
+			setIsLoading(false);
+		}
 	};
 	return (
 		<form className="space-y-4" onSubmit={handleSubmit(sendMail)} noValidate>
@@ -84,11 +92,28 @@ export const Form = () => {
 					errors.message?.message && "border-red-400 border"
 				}`}></textarea>
 			<p className="text-red-400 text-sm mt-3">{errors.message?.message}</p>
-
-			<Button
-				text="Send Message"
-				classN="w-full border-0 py-4 bg-primary text-black"
-			/>
+			{!isLoading ? (
+				<Button classN="w-full border-0 py-4 bg-primary text-[#000]">
+					Send Message
+				</Button>
+			) : (
+				<Button
+					classN="w-full border-0 py-4 flex justify-center bg-primary text-[#000] text-lg"
+					disabled={true}>
+					<FaSpinner className="animate-spin" />
+					<span className="mr-2 animate-pulse text-sm ">Loading...</span>
+				</Button>
+			)}
+			{statusMessage && (
+				<p
+					className={`text-sm mt-3 ${
+						statusMessage.includes("successfully")
+							? "text-green-400"
+							: "text-red-400"
+					}`}>
+					{statusMessage}
+				</p>
+			)}
 		</form>
 	);
 };

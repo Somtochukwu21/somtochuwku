@@ -4,7 +4,8 @@
 @tailwind utilities;
 
 @layer components {
-	.card {
+	
+	 .card {
 		perspective: 1000px;
 	}
 
@@ -17,5 +18,7 @@
 
 	.card:hover Image {
 		scale: 0;
-	}
+	} 
 }
+
+
